@@ -8,9 +8,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <!-- Dependencies for Console-App -->
   <ItemGroup>
     <PackageReference Include="Cocona.Lite" Version="2.0.3" />
   </ItemGroup>
+  
+  <!-- Test-Data -->
   <ItemGroup>
     <None Update="DebugData\Short_Data.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
