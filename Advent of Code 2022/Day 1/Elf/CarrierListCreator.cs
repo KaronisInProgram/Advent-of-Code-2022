@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Day_1.Elf
 {
-    using Food;
-
-    internal class ElfListCreator
+    internal class CarrierListCreator
     {
-        public IList<Elf> CreateList(string inputFile)
+        public static IList<ICarrier<int>> CreateList(string inputFile)
         {
-            IList<Elf> result = new List<Elf>();
+            IList<ICarrier<int>> result = new List<ICarrier<int>>();
 
-            Elf elf = new Elf();
+            ICarrier<int> elf = new Elf();
             foreach (var dataLine in ReadRawData(inputFile))
             {
                 if (string.IsNullOrWhiteSpace(dataLine))
@@ -27,7 +25,7 @@ namespace Day_1.Elf
 
                 if (int.TryParse(dataLine, out int calories))
                 {
-                    elf.Add(new Food(calories));
+                    elf.Values.Add(calories);
                 }
             }
 
