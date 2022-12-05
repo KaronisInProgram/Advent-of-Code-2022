@@ -5,5 +5,6 @@ CoconaLiteApp.Run(([Argument(Description = "Path to the Input File", Name = name
 {
     var guide = GuideCreator.Create(inputFile);
 
-    Console.WriteLine($"Complete Score after all Matches is {guide.Score}");
+    Console.WriteLine($"Complete Score (Part 1) after all Matches is {guide.ScoreFromPart1}");
+    Console.WriteLine($"Complete Score (Part 2) after all Matches is {guide.ScoreFromPart2}");
 });

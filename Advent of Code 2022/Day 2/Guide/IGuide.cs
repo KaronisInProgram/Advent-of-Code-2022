@@ -8,8 +8,7 @@ namespace Day_2.Guide
 {
     internal interface IGuide
     {
-        IEnumerable<(char enemy, char player)> Matches { get; }
-        IEnumerable<int> MatchScores { get; }
-        int Score { get; }
+        public int ScoreFromPart1 { get; }
+        public int ScoreFromPart2 { get; }
     }
 }
