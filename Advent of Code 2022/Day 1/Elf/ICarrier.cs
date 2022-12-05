@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Day_1.Elf
 {
-    internal interface ICarrier<in T>
+    internal interface ICarrier<T>
     {
-        void Add(T element);
-
-        int OwnedValue();
+        ICollection<T> Values { get; }
     }
 }

@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Day_1.Elf
 {
-    using Food;
-
-    internal class Elf : ICarrier<IOwnsCalories>
+    internal class Elf : ICarrier<int>
     {
-        private readonly ICollection<IOwnsCalories> ownedCalories = new List<IOwnsCalories>();
-
-        public void Add(IOwnsCalories element) => ownedCalories.Add(element);
-
-        public int OwnedValue() => ownedCalories.Sum(element => element.GetCalories());
+        public ICollection<int> Values { get; } = new List<int>();
     }
 }
