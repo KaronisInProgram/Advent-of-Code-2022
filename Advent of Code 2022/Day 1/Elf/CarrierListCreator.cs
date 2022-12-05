@@ -8,7 +8,7 @@ namespace Day_1.Elf
 {
     internal class CarrierListCreator
     {
-        public static IList<ICarrier<int>> CreateList(string inputFile)
+        public static IList<ICarrier<int>> Create(string inputFile)
         {
             IList<ICarrier<int>> result = new List<ICarrier<int>>();
 
